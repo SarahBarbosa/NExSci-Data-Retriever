@@ -6,7 +6,15 @@ Este script em Python, `nexsci_data_retriever.py`, fornece uma classe chamada `E
 
 2. **Tabela PSCompPars das Referências**: Baixa dados da tabela PSCompPars com apenas os dados de referência para os parãmetros estelares e planetários e também salva em um arquivo CSV.
 
-> 🔭 Projeto futuro: Tabela com dados de Espectrocopia de Transmissão e Emissão de atmosferas de exoplanetas 
+> 🔭 Projeto futuro: Tabela com dados de Espectrocopia de Transmissão e Emissão de atmosferas de exoplanetas
+
+## Clonando o Repositório
+
+Para obter o código-fonte deste script e começar a usá-lo, você pode clonar o repositório GitHub diretamente em seu sistema usando o seguinte comando:
+
+```bash
+git clone https://github.com/SarahBarbosa/NExSci-Data-Retriever.git
+```
 
 ## Uso
 
@@ -45,7 +53,5 @@ Este script em Python, `nexsci_data_retriever.py`, fornece uma classe chamada `E
 - Python 3.x
 - pandas
 - pytz
-
-Certifique-se de ter esses pacotes instalados em seu ambiente Python antes de usar o script.
 
 > Status do projeto: Em desenvolvimento
