@@ -1,16 +1,14 @@
 # NASA Exoplanet Archive Data Retrieval
 
-Este script em Python, `nexsci_data_retriever.py`, fornece uma classe chamada `ExoplanetDownloader` para baixar e salvar dados de exoplanetas do NExSci (NASA Exoplanet Science Institute) de forma rápida e eficiente. O script permite que você obtenha dois tipos de dados e os salve em arquivos CSV:
+Este script em Python, `nexsci_data_retriever.py`, fornece a classe  `ExoplanetDownloader` na qual foi projetada para baixar dados de exoplanetas do NExSci (Instituto de Ciência de Exoplanetas da NASA) e salvá-los como arquivos CSV. Esta classe simplifica o processo de obtenção de dados exoplanetários e oferece flexibilidade na escolha dos dados a serem incluídos. Em geral, ele permite que você obtenha dois tipos de dados e os salve em arquivos CSV:
 
-1. **Dados de Exoplanetas Confirmados**: Baixa dados de todos os exoplanetas confirmados com `default_flag=1` e os salva em um arquivo CSV.
+1. **Dados de Exoplanetas Confirmados com default_flag = 1**;
 
-2. **Tabela PSCompPars das Referências**: Baixa dados da tabela PSCompPars com apenas os dados de referência para os parãmetros estelares e planetários e também salva em um arquivo CSV.
-
-> 🔭 Projeto futuro: Tabela com dados de Espectrocopia de Transmissão e Emissão de atmosferas de exoplanetas
+2. **Tabela PSCompPars com as Referências associadas aos parâmetros estelares/planetários**.
 
 ## Clonando o Repositório
 
-Para obter o código-fonte deste script e começar a usá-lo, você pode clonar o repositório GitHub diretamente em seu sistema usando o seguinte comando:
+Para obter o código-fonte deste script, você pode clonar o repositório diretamente em seu sistema usando o seguinte comando:
 
 ```bash
 git clone https://github.com/SarahBarbosa/NExSci-Data-Retriever.git
@@ -41,12 +39,25 @@ git clone https://github.com/SarahBarbosa/NExSci-Data-Retriever.git
      downloader.download_confirmed_planets()
      ```
 
-   - Para baixar dados das referências:
+   - Para baixar dados da tabela PSCompPars e referências associadas:
 
      ```python
      downloader.download_pscomppars()
      ```
+
 > ⚠️ **Observação**: Consulte [este link](https://exoplanetarchive.ipac.caltech.edu/docs/ps-conf-ext-mapping.pdf) para obter a lista completa da descrição das colunas.
+
+## Métodos 
+
+### `download_confirmed_planets(include_catalog_name=False, include_errors=False, include_system=False, include_photometry=False, file_name='exoplanetas.csv')`
+
+Este método baixa dados de todos os exoplanetas confirmados com `default_flag=1` (indicando parâmetros padrão) e os salva em um arquivo CSV.
+
+- `include_catalog_name` (bool, opcional): Se True, inclui colunas de outros catálogos (HD, HIP, TIC, GAIA).
+- `include_errors` (bool, opcional): Se True, inclui colunas de incertezas nos parâmetros.
+- `include_system` (bool, opcional): Se True, inclui colunas relacionadas ao sistema planetário (movimento e posição).
+- `include_photometry` (bool, opcional): Se True, inclui colunas de fotometria.
+- `file_name` (str, opcional): Nome do arquivo CSV de saída.
 
 ## Requisitos
 
@@ -54,4 +65,10 @@ git clone https://github.com/SarahBarbosa/NExSci-Data-Retriever.git
 - pandas
 - pytz
 
-> Status do projeto: Em desenvolvimento
+## Acknowledging the NASA Exoplanet Archive
+
+This research has made use of the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program.
+
+---
+
+> 🔭 Projeto em desenvolvimento: Tabela com dados de Espectrocopia de Transmissão e Emissão de atmosferas de exoplanetas
