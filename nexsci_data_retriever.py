@@ -53,8 +53,6 @@ class ExoplanetDownloader:
         overwrite : bool, opcional
             Se True, os arquivos serão sobregravados se já existirem. Se False, um aviso será emitido.
         """
-        if not self.BASE_URL:
-            raise ValueError("A URL deve ser fornecida para baixar os dados.")
         self.data_directory = data_directory
         self.overwrite = overwrite
 
