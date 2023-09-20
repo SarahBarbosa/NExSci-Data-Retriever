@@ -1,7 +1,9 @@
 # Folders
 **/__pycache__
+.venv
 
 # Files
 playground.ipynb
 exoplanetas.csv
 referencias.csv
+Stellar_Age_Selected_Data.csv
