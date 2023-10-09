@@ -138,7 +138,7 @@ class ExoplanetDownloader:
                         'sy_tmag', 'sy_tmagerr1', 'sy_tmagerr2', 'sy_kepmag', 'sy_kepmagerr1', 'sy_kepmagerr2'
                         ]
                     
-                df.drop(photometry_columns, axis=1, inplace=True)
+                    df.drop(photometry_columns, axis=1, inplace=True)
 
                 print('>> Salvando o dataframe de exoplanetas...')
                 df.to_csv(file_path, index=False)
