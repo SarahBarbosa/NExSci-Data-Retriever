@@ -94,7 +94,8 @@ class ExoplanetDownloader:
                                         'ima_flag', 'dkin_flag', 'pl_nnotes', 'pl_refname',
                                         'st_refname', 'rowupdate', 'pl_pubdate', 'releasedate',
                                         'st_nphot', 'st_nrvc', 'pl_ntranspec', 'pl_nespec',
-                                        'st_nspec', 'sy_refname', 'rastr', 'decstr']
+                                        'st_nspec', 'sy_refname', 'rastr', 'decstr', 'htm20', 'ttv_flag',
+                                        'st_metratio']
                 df.drop(columns_to_remove, axis=1, inplace=True)
 
                 if not include_catalog_name:
