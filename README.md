@@ -1,6 +1,6 @@
 # NASA Exoplanet Archive Data Retrieval
 
-Este script em Python, `nexsci_data_retriever.py`, fornece a classe  `ExoplanetDownloader` na qual foi projetada para baixar dados de exoplanetas do NExSci (Instituto de Ciência de Exoplanetas da NASA) e salvá-los como arquivos CSV. Esta classe simplifica o processo de obtenção de dados exoplanetários e oferece flexibilidade na escolha dos dados a serem incluídos. Em geral, ele permite que você obtenha dois tipos de dados e os salve em arquivos CSV:
+Este script fornece a classe  `ExoplanetDownloader` na qual foi projetada para baixar dados de exoplanetas do NExSci (Instituto de Ciência de Exoplanetas da NASA) e salvá-los como arquivos CSV. Esta classe simplifica o processo de obtenção de dados exoplanetários e oferece flexibilidade na escolha dos dados a serem incluídos. Em geral, ele permite que você obtenha dois tipos de dados e os salve em arquivos CSV:
 
 1. **Dados de Exoplanetas Confirmados com default_flag = 1**;
 
@@ -49,9 +49,14 @@ git clone https://github.com/SarahBarbosa/NExSci-Data-Retriever.git
 
 ## Métodos 
 
-### `download_confirmed_planets(include_catalog_name=False, include_errors=False, include_system=False, include_photometry=False, file_name='exoplanetas.csv')`
-
-Este método baixa dados de todos os exoplanetas confirmados com `default_flag=1` (indicando parâmetros padrão) e os salva em um arquivo CSV.
+```python
+download_confirmed_planets(include_catalog_name=False,
+                           include_errors=False,
+                           include_system=False,
+                           include_photometry=False,
+                           file_name='exoplanetas.csv')
+```
+Aqui, você baixa os dados de todos os exoplanetas confirmados com `default_flag=1` (indicando parâmetros padrão) e os salva em um arquivo CSV.
 
 - `include_catalog_name` (bool, opcional): Se True, inclui colunas de outros catálogos (HD, HIP, TIC, GAIA).
 - `include_errors` (bool, opcional): Se True, inclui colunas de incertezas nos parâmetros.
