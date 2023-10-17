@@ -1,6 +1,6 @@
 # NASA Exoplanet Archive Data Retrieval
 
-Este script fornece a classe  `ExoplanetDownloader` na qual foi projetada para baixar dados de exoplanetas do NExSci (Instituto de Ciência de Exoplanetas da NASA) e salvá-los como arquivos CSV. Esta classe simplifica o processo de obtenção de dados exoplanetários e oferece flexibilidade na escolha dos dados a serem incluídos. Em geral, ele permite que você obtenha dois tipos de dados e os salve em arquivos CSV:
+Este script fornece a classe `ExoplanetDownloader` projetada para baixar dados de exoplanetas do NExSci e salvá-los como arquivos CSV. Esta classe simplifica o processo de obtenção de dados exoplanetários/estelares e oferece flexibilidade na escolha dos dados a serem incluídos. Em geral, ele permite que você obtenha dois tipos de dados e os salve em arquivos CSV:
 
 1. **Dados de Exoplanetas Confirmados com default_flag = 1**;
 
@@ -19,16 +19,15 @@ git clone https://github.com/SarahBarbosa/NExSci-Data-Retriever.git
 1. Importe o módulo `nexsci_data_retriever`:
 
    ```python
-   import nexsci_data_retriever as ndr
+   from nexsci_data_retriever import ExoplanetDownloader
    ```
 
 2. Inicialize uma instância da classe `ExoplanetDownloader` fornecendo o diretório onde os arquivos CSV serão salvos:
 
    ```python
-   # import os
-   # diretorio_do_notebook = os.getcwd()
-   diretorio_do_notebook = '/seu/caminho/de/diretorio'
-   downloader = ndr.ExoplanetDownloader(diretorio_do_notebook)
+   import os
+   diretorio_do_notebook = os.getcwd()
+   downloader = ExoplanetDownloader(diretorio_do_notebook)
    ```
 
 3. Baixe os dados desejados:
@@ -66,9 +65,11 @@ Aqui, você baixa os dados de todos os exoplanetas confirmados com `default_flag
 
 ## Requisitos
 
-- Python 3.x
-- pandas
-- pytz
+Você pode instalar as bibliotecas necessárias usando o seguinte comando:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Acknowledging the NASA Exoplanet Archive
 
